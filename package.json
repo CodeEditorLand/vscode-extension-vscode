@@ -1,31 +1,14 @@
 {
-	"name": "vscode",
-	"version": "0.0.1",
-	"private": false,
-	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
-	"bugs": {
-		"url": "https://github.com/CodeEditorLand/Foundation/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Playform",
 		"email": "Hello@Playform.Cloud",
+		"name": "Playform",
 		"url": "https://playform.cloud"
 	},
-	"type": "module",
-	"typings": "vscode.d.ts",
 	"bin": {
 		"vscode-install": "./bin/install"
 	},
-	"scripts": {
-		"compile": "tsc -p ./",
-		"prepare": "tsc -p ./",
-		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
-		"watch": "tsc -watch -p ./"
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
 	},
 	"dependencies": {
 		"glob": "10.3.10",
@@ -40,9 +23,26 @@
 		"@types/glob": "8.1.0",
 		"@types/mocha": "10.0.6",
 		"@types/node": "20.11.30",
-		"typescript-esbuild": "0.4.5"
+		"typescript-esbuild": ""
 	},
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"license": "SEE LICENSE IN LICENSE",
+	"name": "vscode",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"prepare": "tsc -p ./",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
+		"watch": "tsc -watch -p ./"
+	},
+	"type": "module",
+	"typings": "vscode.d.ts",
+	"version": "0.0.1"
 }
