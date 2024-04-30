@@ -1,39 +1,49 @@
 {
-  "name": "vscode",
-  "version": "1.1.37",
-  "typings": "vscode.d.ts",
-  "scripts": {
-    "prepare": "tsc -p ./",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
-  },
-  "bin": {
-    "vscode-install": "./bin/install"
-  },
-  "engines": {
-    "node": ">=8.9.3"
-  },
-  "dependencies": {
-    "glob": "^7.1.2",
-    "http-proxy-agent": "^4.0.1",
-    "https-proxy-agent": "^5.0.0",
-    "mocha": "^5.2.0",
-    "semver": "^5.4.1",
-    "source-map-support": "^0.5.0",
-    "vscode-test": "^0.4.1"
-  },
-  "devDependencies": {
-    "@types/glob": "^5.0.33",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^10.14.8"
-  },
-  "license": "MIT",
-  "author": "Visual Studio Code Team",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Microsoft/vscode-extension-vscode.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Microsoft/vscode-extension-vscode/issues"
-  }
+	"name": "vscode",
+	"version": "0.0.1",
+	"private": false,
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandExtensionLand#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandExtensionLand/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandExtensionLand.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"typings": "vscode.d.ts",
+	"bin": {
+		"vscode-install": "./bin/install"
+	},
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "tsc -p ./",
+		"prepare": "tsc -p ./",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"dependencies": {
+		"glob": "^7.1.2",
+		"http-proxy-agent": "^4.0.1",
+		"https-proxy-agent": "^5.0.0",
+		"semver": "^5.4.1",
+		"source-map-support": "^0.5.0"
+	},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"@types/glob": "^5.0.33",
+		"@types/node": "^10.14.8"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
