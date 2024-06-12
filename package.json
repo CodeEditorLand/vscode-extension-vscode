@@ -3,15 +3,15 @@
 		"vscode-install": "./bin/install"
 	},
 	"dependencies": {
-		"glob": "^10.4.1",
-		"http-proxy-agent": "^7.0.2",
-		"https-proxy-agent": "^7.0.4",
-		"semver": "^7.6.2",
-		"source-map-support": "^0.5.21"
+		"glob": "10.4.1",
+		"http-proxy-agent": "7.0.2",
+		"https-proxy-agent": "7.0.4",
+		"semver": "7.6.2",
+		"source-map-support": "0.5.21"
 	},
 	"devDependencies": {
-		"@types/glob": "^8.1.0",
-		"@types/node": "^20.14.2"
+		"@types/glob": "8.1.0",
+		"@types/node": "20.14.2"
 	},
 	"name": "vscode",
 	"scripts": {
