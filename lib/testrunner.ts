@@ -2,54 +2,51 @@
  * Copyright (C) Microsoft Corporation. All rights reserved.
  *--------------------------------------------------------*/
 
-"use strict";
+'use strict';
 
-import * as paths from "path";
-import * as glob from "glob";
+import * as paths from 'path';
+import * as glob from 'glob';
 
 // Linux: prevent a weird NPE when mocha on Linux requires the window size from the TTY
 // Since we are not running in a tty environment, we just implement the method statically
-var tty = require("tty");
+var tty = require('tty');
 if (!tty.getWindowSize) {
-	tty.getWindowSize = function () {
-		return [80, 75];
-	};
+    tty.getWindowSize = function () { return [80, 75]; };
 }
 
-import Mocha = require("mocha");
+import Mocha = require('mocha');
 
 let mocha = new Mocha(<any>{
-	ui: "tdd",
-	useColors: true,
+    ui: 'tdd',
+    useColors: true
 });
 
 export function configure(opts: MochaSetupOptions): void {
-	mocha = new Mocha(opts);
+    mocha = new Mocha(opts);
 }
 
-export function run(
-	testsRoot: string,
-	clb: (error, failures?: number) => void,
-): void {
-	// Enable source map support
-	require("source-map-support").install();
+export function run(testsRoot: string, clb: (error, failures?: number) => void): void {
 
-	// Glob test files
-	glob("**/**.test.js", { cwd: testsRoot }, (error, files) => {
-		if (error) {
-			return clb(error);
-		}
+    // Enable source map support
+    require('source-map-support').install();
 
-		try {
-			// Fill into Mocha
-			files.forEach((f) => mocha.addFile(paths.join(testsRoot, f)));
+    // Glob test files
+    glob('**/**.test.js', { cwd: testsRoot }, (error, files) => {
+        if (error) {
+            return clb(error);
+        }
 
-			// Run the tests
-			mocha.run((failures) => {
-				clb(null, failures);
-			});
-		} catch (error) {
-			return clb(error);
-		}
-	});
+        try {
+
+            // Fill into Mocha
+            files.forEach(f => mocha.addFile(paths.join(testsRoot, f)));
+
+            // Run the tests
+            mocha.run((failures) => {
+                clb(null, failures);
+            });
+        } catch (error) {
+            return clb(error);
+        }
+    });
 }

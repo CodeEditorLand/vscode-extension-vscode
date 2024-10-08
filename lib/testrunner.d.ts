@@ -1,124 +1,125 @@
-declare module "vscode/lib/testrunner" {
-	export function configure(options: MochaSetupOptions): void;
+declare module 'vscode/lib/testrunner' {
+    export function configure(options: MochaSetupOptions): void;
 
-	interface MochaSetupOptions {
-		/**
-		 * Milliseconds to wait before considering a test slow
-		 *
-		 * @type {Number}
-		 */
-		slow?: number;
+    interface MochaSetupOptions {
 
-		/**
-		 * Enable timeouts
-		 *
-		 * @type {Boolean}
-		 */
-		enableTimeouts?: boolean;
+        /**
+         * Milliseconds to wait before considering a test slow
+         *
+         * @type {Number}
+         */
+        slow?: number;
 
-		/**
-		 * Timeout in milliseconds
-		 *
-		 * @type {Number}
-		 */
-		timeout?: number;
+        /**
+         * Enable timeouts
+         *
+         * @type {Boolean}
+         */
+        enableTimeouts?: boolean;
 
-		/**
-		 * UI name "bdd", "tdd", "exports" etc
-		 *
-		 * @type {String}
-		 */
-		ui?: string;
+        /**
+         * Timeout in milliseconds
+         *
+         * @type {Number}
+         */
+        timeout?: number;
 
-		/**
-		 * Array of accepted globals
-		 *
-		 * @type {Array} globals
-		 */
-		globals?: any[];
+        /**
+         * UI name "bdd", "tdd", "exports" etc
+         *
+         * @type {String}
+         */
+        ui?: string;
 
-		/**
-		 * Reporter instance (function or string), defaults to `mocha.reporters.spec`
-		 *
-		 * @type {String | Function}
-		 */
-		reporter?: any;
+        /**
+         * Array of accepted globals
+         *
+         * @type {Array} globals
+         */
+        globals?: any[];
 
-		/**
-		 * Reporter settings object
-		 *
-		 * @type {Object}
-		 */
-		reporterOptions?: any;
+        /**
+         * Reporter instance (function or string), defaults to `mocha.reporters.spec`
+         *
+         * @type {String | Function}
+         */
+        reporter?: any;
 
-		/**
-		 * Bail on the first test failure
-		 *
-		 * @type {Boolean}
-		 */
-		bail?: boolean;
+        /**
+         * Reporter settings object
+         *
+         * @type {Object}
+         */
+        reporterOptions?: any;
 
-		/**
-		 * Ignore global leaks
-		 *
-		 * @type {Boolean}
-		 */
-		ignoreLeaks?: boolean;
+        /**
+         * Bail on the first test failure
+         *
+         * @type {Boolean}
+         */
+        bail?: boolean;
 
-		/**
-		 * grep string or regexp to filter tests with, if a string it is escaped
-		 *
-		 * @type {RegExp | String}
-		 */
-		grep?: any;
+        /**
+         * Ignore global leaks
+         *
+         * @type {Boolean}
+         */
+        ignoreLeaks?: boolean;
 
-		/**
-		 * Use colored output from test results
-		 *
-		 * @type {Boolean}
-		 */
-		useColors?: boolean;
+        /**
+         * grep string or regexp to filter tests with, if a string it is escaped
+         *
+         * @type {RegExp | String}
+         */
+        grep?: any;
 
-		/**
-		 * Tests marked only fail the suite
-		 *
-		 * @type {Boolean}
-		 */
-		forbidOnly?: boolean;
+        /**
+         * Use colored output from test results
+         *
+         * @type {Boolean}
+         */
+        useColors?: boolean;
 
-		/**
-		 * Pending tests and tests marked skip fail the suite
-		 *
-		 * @type {Boolean}
-		 */
-		forbidPending?: boolean;
+        /**
+         * Tests marked only fail the suite
+         *
+         * @type {Boolean}
+         */
+        forbidOnly?: boolean;
 
-		/**
-		 * Number of times to retry failed tests
-		 *
-		 * @type {Number}
-		 */
-		retries?: number;
+        /**
+         * Pending tests and tests marked skip fail the suite
+         *
+         * @type {Boolean}
+         */
+        forbidPending?: boolean;
 
-		/**
-		 * Display long stack-trace on failing
-		 *
-		 * @type {Boolean}
-		 */
-		fullStackTrace?: boolean;
+        /**
+         * Number of times to retry failed tests
+         *
+         * @type {Number}
+         */
+        retries?: number;
 
-		/**
-		 * Delay root suite execution
-		 *
-		 * @type {Boolean}
-		 */
-		delay?: boolean;
+        /**
+         * Display long stack-trace on failing
+         *
+         * @type {Boolean}
+         */
+        fullStackTrace?: boolean;
 
-		/**
-		 * Use inline diffs rather than +/-
-		 *
-		 * @type {Boolean}
-		 */
-		useInlineDiffs?: boolean;
-	}
+        /**
+         * Delay root suite execution
+         *
+         * @type {Boolean}
+         */
+        delay?: boolean;
+
+        /**
+         * Use inline diffs rather than +/-
+         *
+         * @type {Boolean}
+         */
+        useInlineDiffs?: boolean;
+    }
 }
