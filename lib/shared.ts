@@ -8,9 +8,11 @@ import * as https from "https";
 import { parse as parseUrl } from "url";
 
 const HttpsProxyAgent = require("https-proxy-agent");
+
 const HttpProxyAgent = require("http-proxy-agent");
 
 let PROXY_AGENT = undefined;
+
 let HTTPS_PROXY_AGENT = undefined;
 
 if (process.env.npm_config_proxy) {
@@ -60,6 +62,7 @@ function toHttpRequestOptions(
 	headers = { "user-agent": "nodejs" },
 ): https.RequestOptions {
 	const options: https.RequestOptions = parseUrl(url);
+
 	if (PROXY_AGENT && options.protocol.startsWith("http:")) {
 		options.agent = PROXY_AGENT;
 	}
