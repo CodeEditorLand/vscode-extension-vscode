@@ -17,6 +17,7 @@ let HTTPS_PROXY_AGENT = undefined;
 
 if (process.env.npm_config_proxy) {
 	PROXY_AGENT = new HttpProxyAgent(process.env.npm_config_proxy);
+
 	HTTPS_PROXY_AGENT = new HttpsProxyAgent(process.env.npm_config_proxy);
 }
 if (process.env.npm_config_https_proxy) {
@@ -66,6 +67,7 @@ function toHttpRequestOptions(
 	if (PROXY_AGENT && options.protocol.startsWith("http:")) {
 		options.agent = PROXY_AGENT;
 	}
+
 	if (HTTPS_PROXY_AGENT && options.protocol.startsWith("https:")) {
 		options.agent = HTTPS_PROXY_AGENT;
 	}
